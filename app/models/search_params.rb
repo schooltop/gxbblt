@@ -20,6 +20,9 @@ class SearchParams
       end
       h}
   end
+  def params(controller = nil)
+    attributes(controller)
+  end
 
   def method_missing(method, *value)
     if method.to_s =~ /=$/

@@ -25,7 +25,7 @@ gem 'jquery-rails'
 gem 'remotipart', '~> 1.2'
 gem 'cocoon'
 gem 'simple_form'
-gem 'default_where', github: 'qinmingyuan/default_where'
+gem 'default_where', github: 'jamst/default_where'
 
 gem 'spreadsheet'
 gem 'roo'
@@ -54,8 +54,6 @@ group :development, :test do
   # Adds support for Capybara system testing and selenium driver
   gem 'capybara', '~> 2.13'
   gem 'selenium-webdriver'
-  gem "better_errors"
-  gem "binding_of_caller"
 end
 
 group :development do

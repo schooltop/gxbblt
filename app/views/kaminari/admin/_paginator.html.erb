@@ -13,7 +13,7 @@
       <%= next_page_tag unless current_page.last? %>
       <%= last_page_tag unless current_page.last? %>
       <% select_item_count = total_pages > 500  ? 500 : total_pages %>
-        <select class="ui search dropdown selection" onchange="window.location.href = this.value">
+        <select class="ui search dropdown selection item" onchange="onPaginationSelect(this)">
           <%(1..select_item_count).to_a.each do |page| %>
             <%= select_tag page %>
           <% end %>

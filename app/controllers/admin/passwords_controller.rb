@@ -1,5 +1,6 @@
 class Admin::PasswordsController < Devise::PasswordsController
   skip_before_action :require_no_authentication, :only => [:edit, :update]
+  layout false 
 
   def edit
      super

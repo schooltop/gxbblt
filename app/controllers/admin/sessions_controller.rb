@@ -1,7 +1,7 @@
 class Admin::SessionsController < Devise::SessionsController
+ layout false  
  # before_action :configure_sign_in_params, only: [:create]
-  layout false
-
+  # GET /resource/sign_in
   def new
     super
   end
@@ -23,7 +23,6 @@ class Admin::SessionsController < Devise::SessionsController
   # DELETE /resource/sign_out
   def destroy
     Rails.cache.delete("current_employee_#{current_employee.id}".to_sym)
-    #current_employee.add_log("#{current_employee.email} Sign out At #{Time.now.format_date(:full)}",request.ip)
     sign_out
     redirect_to admin_employees_path
     #super
@@ -31,7 +30,7 @@ class Admin::SessionsController < Devise::SessionsController
 
   # 登录后不同角色跳转
   def login_jump_url
-    admin_employees_path
+   admin_employees_path
   end
 
   # protected
