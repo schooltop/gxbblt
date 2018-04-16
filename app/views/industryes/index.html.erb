@@ -1,0 +1,36 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Industryes</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr>
+        <td>类型</td>
+        <td>父类id</td>
+        <td>查看</td>
+        <td>修改</td>
+        <td>删除</td>
+      </tr>
+
+    <% @industryes.each do |industrye| %>
+      <tr>
+        <td><%= industrye.industry%></td>
+        <td><%= industrye.parent_id%></td>
+        <td><%= link_to 'Show', industrye %></td>
+        <td><%= link_to 'Edit', edit_industrye_path(industrye) %></td>
+        <td><%= link_to 'Destroy', industrye, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+    
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Industrye', new_industrye_path %>

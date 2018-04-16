@@ -55,4 +55,8 @@ CreateTables.new.change
 # email to me!
 em = Employee.create(email:"107422244@qq.com",password:"11111111",name:"jamst")
 
+Company.create(name:"test")
 
+message = Message.create(title:'招聘信息找资深经理',company_id:'1',industryes_id:'2',information:'饭卡和客服哈看哈哈',contacts_id:'1',click_times:'0')
+
+address = Address.create(province:'广西', city:'玉林市', county:'博白县', town:'龙潭镇' ,street:'龙中路',door_number:'75号')

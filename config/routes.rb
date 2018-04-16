@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :industryes
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   namespace :admin do
     root to: 'employees#desboart'
@@ -13,19 +14,13 @@ Rails.application.routes.draw do
         get  :desboart
       end
     end
-  end
 
-  namespace :web do
-    resources :center do
+    resources :industryes do 
       collection do 
-        get :show_industrye
-        get :show_information
       end
     end
+
   end
-
-
-
 
   #root to: '/admin/employees'
   devise_for :employees, path: "admin", path_names: { sign_in: 'login', sign_out: 'logout', password: 'secret', confirmation: 'verification', unlock: 'unblock', sign_up: 'cmon_let_me_in' }, controllers: { sessions: "admin/sessions", passwords: "admin/passwords"}

@@ -1,6 +1,6 @@
-class CreateInformations < ActiveRecord::Migration[5.1]
+class CreateMessages < ActiveRecord::Migration[5.1]
   def change
-    create_table :informations do |t|
+    create_table :messages do |t|
     	t.text "title", comment: "标题"
     	t.integer "company_id", comment: "公司"
     	t.integer "industryes_id", comment: "信息类型"

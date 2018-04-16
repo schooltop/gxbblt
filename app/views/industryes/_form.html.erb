@@ -1,0 +1,26 @@
+
+<%= form_with(model: industrye, local: true) do |form| %>
+  <% if industrye.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(industrye.errors.count, "error") %> prohibited this industrye from being saved:</h2>
+
+      <ul>
+      <% industrye.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <div>
+    <%= form.input :industrye, placeholder: '类别' %>
+    <%= form.input :parent_id, placeholder: '父类ID' %>
+
+
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
+
+

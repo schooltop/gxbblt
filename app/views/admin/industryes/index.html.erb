@@ -1,0 +1,20 @@
+
+<div class="left floated wide column">
+      <%= link_to new_admin_industrye_path, class: 'ui primary button' do %>
+        <i class="plus icon"></i> 增加
+      <% end %>
+</div>
+
+<table>
+  <thead>
+    <tr>
+        <td>类型</td>
+        <td>父类id</td>
+        <td>修改</td>
+        <td>删除</td>
+      </tr>
+  </thead>
+  <tbody>
+    <%= render partial: 'list', collection: @industryes, as: :industrye %>
+  </tbody>
+</table>
