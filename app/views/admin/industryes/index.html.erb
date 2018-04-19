@@ -5,16 +5,17 @@
       <% end %>
 </div>
 
-<table>
-  <thead>
-    <tr>
-        <td>类型</td>
-        <td>父类id</td>
-        <td>修改</td>
-        <td>删除</td>
-      </tr>
-  </thead>
-  <tbody>
+<table class="ui selectable striped celled table">
+    <thead>
+    <tr >
+      <th class="center aligned">类型</th>
+      <th class="center aligned">父类id</th>
+      <th class="center aligned">修改</th>
+      <th class="center aligned">删除</th>
+    </tr>
+    </thead>
+    <tbody>
     <%= render partial: 'list', collection: @industryes, as: :industrye %>
-  </tbody>
-</table>
+    </tbody>
+  </table>
+
