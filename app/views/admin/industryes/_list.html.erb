@@ -1,12 +1,14 @@
-
 <tr>
-        <td><%= industrye.industry%></td>
-        <td><%= industrye.parent_id%></td>
-        <td><%= link_to edit_industrye_path(industrye), data: {content: '修改', variation: 'inverted'}, class: 'ui blue icon button' do %>
+  <td class="center aligned">
+    <span><%= industrye.industry%></span>
+  </td>
+  <td class="center aligned">
+    <%= industrye.parent_id%>
+  </td>
+  
+  <td class="center aligned">
+    <%= link_to edit_industrye_path(industrye), data: {content: '修改', variation: 'inverted'}, class: 'ui blue icon button' do %>
       <i class="edit icon"></i>
-    <% end %></td>
-
-
-
-        <td><%= link_to 'Destroy', industrye, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    <% end %>
+  </td>
 </tr>
