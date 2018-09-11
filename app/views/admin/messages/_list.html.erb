@@ -1,0 +1,26 @@
+<tr>
+  <td class="center aligned">
+    <span><%= message.title %></span>
+  </td>
+  <td class="center aligned">
+    <%= message.company_id %>
+  </td>
+  <td class="center aligned">
+    <%= message.industryes_id %>
+  </td>
+  <td class="center aligned">
+    <%= message.information %>
+  </td>
+  <td class="center aligned">
+    <%= message.contacts_id %>
+  </td>
+  <td class="center aligned">
+    <%= message.click_times %>
+  </td>
+  
+  <td class="center aligned">
+    <%= link_to edit_admin_message_path(message), data: {content: '修改', variation: 'inverted'}, class: 'ui blue icon button' do %>
+      <i class="edit icon"></i>
+    <% end %>
+  </td>
+</tr>

@@ -1,0 +1,19 @@
+<div class="left floated wide column">
+      <%= link_to new_admin_company_path, class: 'ui primary button' do %>
+        <i class="puls icon"></i> 增加
+      <% end %>
+
+</div>
+
+<table class="ui selectable striped celled table">
+    <thead>
+    <tr >
+      <th class="center aligned"> 公司</th>
+      <th class="center aligned">法人</th>
+      <th class="center aligned">操作</th>
+    </tr>
+    </thead>
+    <tbody>
+    <%= render partial: 'list', collection: @company, as: :company %>
+    </tbody>
+  </table>

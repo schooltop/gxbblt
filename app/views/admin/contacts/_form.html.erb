@@ -1,0 +1,44 @@
+<%= form_for @contact, url: url, method: meth do |f| %>
+	<div class="control-group optional form-group field ui form" style="margin-top: 10px" >
+	  <%= f.label :companys_id, '公司名', class: 'password optional control-label' %>
+	  <div class="controls">
+	    <%= f.text_field :companys_id, class: 'form-control input-sm', style: 'width: 280px;' %>
+	  </div>
+    </div>
+
+    <div class="control-group optional form-group field ui form" style="margin-top: 10px" >
+	  <%= f.label :name, '姓名', class: 'password optional control-label' %>
+	  <div class="controls">
+	    <%= f.text_field :name, class: 'form-control input-sm', style: 'width: 280px;' %>
+	  </div>
+    </div>
+
+    <div class="control-group optional form-group field ui form" style="margin-top: 10px" >
+	  <%= f.label :position, '职位', class: 'password optional control-label' %>
+	  <div class="controls">
+	    <%= f.text_field :position, class: 'form-control input-sm', style: 'width: 280px;' %>
+	  </div>
+    </div>
+
+    <div class="control-group optional form-group field ui form" style="margin-top: 10px" >
+	  <%= f.label :telephone, '联系电话', class: 'password optional control-label' %>
+	  <div class="controls">
+	    <%= f.text_field :telephone, class: 'form-control input-sm', style: 'width: 280px;' %>
+	  </div>
+    </div>
+
+    <div class="control-group optional form-group field ui form" style="margin-top: 10px" >
+	  <%= f.label :e_mail, '邮箱', class: 'password optional control-label' %>
+	  <div class="controls">
+	    <%= f.text_field :e_mail, class: 'form-control input-sm', style: 'width: 280px;' %>
+	  </div>
+    </div>
+
+    <div class="row-fluid">
+		<a href="javascript:history.back();"><div class="ui button cancel">返回</div></a>
+   		<%= f.submit :class=>"ui primary button"%>
+  	</div>
+
+
+
+<% end %>

@@ -1,0 +1,43 @@
+<%= form_for @company, url: url, method: meth do |f| %>
+
+	<div class="control-group optional form-group field ui form" style="margin-top: 10px" >
+	  <%= f.label :name, '公司名', class: 'password optional control-label' %>
+	  <div class="controls">
+	    <%= f.text_field :name, class: 'form-control input-sm', style: 'width: 280px;' %>
+	  </div>
+    </div>
+
+    <div class="control-group optional form-group field ui form" style="margin-top: 10px" >
+	  <%= f.label :artificial, '法人', class: 'password optional control-label' %>
+	  <div class="controls">
+	    <%= f.text_field :artificial, class: 'form-control input-sm', style: 'width: 280px;' %>
+	  </div>
+    </div>
+
+    <div class="control-group optional form-group field ui form" style="margin-top: 10px" >
+	  <%= f.label :information, '简介', class: 'password optional control-label' %>
+	  <div class="controls">
+	    <%= f.text_field :information, class: 'form-control input-sm', style: 'width: 280px;' %>
+	  </div>
+	 </div>
+
+	 <div class="control-group optional form-group field ui form" style="margin-top: 10px" >
+	  <%= f.label :address_id, '地址', class: 'password optional control-label' %>
+	  <div class="controls">
+	    <%= f.text_field :address_id, class: 'form-control input-sm', style: 'width: 280px;' %>
+	  </div>
+    </div>
+
+    <div class="control-group optional form-group field ui form" style="margin-top: 10px" >
+	  <%= f.label :creation_date, '创建时间', class: 'password optional control-label' %>
+	  <div class="controls">
+	    <%= f.text_field :creation_date, class: 'form-control input-sm', style: 'width: 280px;' %>
+	  </div>
+    </div>
+	
+    <div class="row-fluid">
+		<a href="javascript:history.back();"><div class="ui button cancel">返回</div></a>
+   		<%= f.submit :class=>"ui primary button"%>
+  	</div>
+
+<% end %>

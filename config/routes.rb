@@ -20,6 +20,26 @@ Rails.application.routes.draw do
       end
     end
 
+    resources :companies do
+      collection do
+      end
+    end
+
+    resources :addresses do
+      collection do
+      end
+    end
+
+    resources :contacts do 
+      collection do
+      end
+    end
+
+    resources :messages do
+      collection do
+      end
+    end
+
   end
 
   #root to: '/admin/employees'

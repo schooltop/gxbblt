@@ -1,0 +1,26 @@
+<tr>
+  <td class="center aligned">
+    <span><%= address.province%></span>
+  </td>
+  <td class="center aligned">
+    <%= address.city%>
+  </td>
+  <td class="center aligned">
+    <%= address.county%>
+  </td>
+  <td class="center aligned">
+    <%= address.town%>
+  </td>
+  <td class="center aligned">
+    <%= address.street%>
+  </td>
+  <td class="center aligned">
+    <%= address.door_number%>
+  </td>
+  
+  <td class="center aligned">
+    <%= link_to edit_admin_address_path(address), data: {content: '修改', variation: 'inverted'}, class: 'ui blue icon button' do %>
+      <i class="edit icon"></i>
+    <% end %>
+  </td>
+</tr>

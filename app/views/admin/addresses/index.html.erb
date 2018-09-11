@@ -1,0 +1,22 @@
+<div class="left floated wide column">
+      <%= link_to new_admin_address_path, class: 'ui primary button' do %>
+        <i class="plus icon"></i> 增加
+      <% end %>
+</div>
+
+<table class="ui selectable striped celled table">
+    <thead>
+    <tr >
+      <th class="center aligned">省份</th>
+      <th class="center aligned">市</th>
+      <th class="center aligned">县</th>
+      <th class="center aligned">镇/乡</th>
+      <th class="center aligned">街／村</th>
+      <th class="center aligned">门牌号</th>
+      <th class="center aligned">操作</th>
+    </tr>
+    </thead>
+    <tbody>
+    <%= render partial: 'list', collection: @address, as: :address %>
+    </tbody>
+  </table>
