@@ -1,0 +1,23 @@
+<tr>
+  <td class="center aligned">
+    <span><%= contact.companys_id %></span>
+  </td>
+  <td class="center aligned">
+    <%= contact.name %>
+  </td>
+  <td class="center aligned">
+    <%= contact.position %>
+  </td>
+  <td class="center aligned">
+    <%= contact.telephone %>
+  </td>
+  <td class="center aligned">
+    <%= contact.e_mail %>
+  </td>
+  
+  <td class="center aligned">
+    <%= link_to edit_admin_contact_path(contact), data: {content: '修改', variation: 'inverted'}, class: 'ui blue icon button' do %>
+      <i class="edit icon"></i>
+    <% end %>
+  </td>
+</tr>

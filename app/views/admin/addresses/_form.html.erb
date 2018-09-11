@@ -1,0 +1,50 @@
+<%= form_for @address, url: url, method: meth do |f| %>
+
+	<div class="control-group optional form-group field ui form" style="margin-top: 10px" >
+	  <%= f.label :province, '省份', class: 'password optional control-label' %>
+	  <div class="controls">
+	    <%= f.text_field :province, class: 'form-control input-sm', style: 'width: 280px;' %>
+	  </div>
+    </div>
+
+    <div class="control-group optional form-group field ui form" style="margin-top: 10px" >
+	  <%= f.label :city, '市', class: 'password optional control-label' %>
+	  <div class="controls">
+	    <%= f.text_field :city, class: 'form-control input-sm', style: 'width: 280px;' %>
+	  </div>
+	 </div>
+
+	 <div class="control-group optional form-group field ui form" style="margin-top: 10px" >
+	  <%= f.label :county, '县', class: 'password optional control-label' %>
+	  <div class="controls">
+	    <%= f.text_field :county, class: 'form-control input-sm', style: 'width: 280px;' %>
+	  </div>
+    </div>
+
+    <div class="control-group optional form-group field ui form" style="margin-top: 10px" >
+	  <%= f.label :town, '镇／乡', class: 'password optional control-label' %>
+	  <div class="controls">
+	    <%= f.text_field :town, class: 'form-control input-sm', style: 'width: 280px;' %>
+	  </div>
+    </div>
+
+    <div class="control-group optional form-group field ui form" style="margin-top: 10px" >
+	  <%= f.label :street, '街／村', class: 'password optional control-label' %>
+	  <div class="controls">
+	    <%= f.text_field :street, class: 'form-control input-sm', style: 'width: 280px;' %>
+	  </div>
+    </div>
+
+    <div class="control-group optional form-group field ui form" style="margin-top: 10px" >
+	  <%= f.label :door_number, '门牌号', class: 'password optional control-label' %>
+	  <div class="controls">
+	    <%= f.text_field :door_number, class: 'form-control input-sm', style: 'width: 280px;' %>
+	  </div>
+    </div>
+	
+    <div class="row-fluid">
+	<a href="javascript:history.back();"><div class="ui button cancel">返回</div></a>
+    <%= f.submit :class=>"ui primary button"%>
+  	</div>
+
+<% end %>

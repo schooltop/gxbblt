@@ -1,0 +1,14 @@
+<tr>
+  <td class="center aligned">
+    <span><%= company.name%></span>
+  </td>
+  <td class="center aligned">
+    <%= company.artificial%>
+  </td>
+  
+  <td class="center aligned">
+    <%= link_to edit_admin_company_path(company), data: {content: '修改', variation: 'inverted'}, class: 'ui blue icon button' do %>
+      <i class="edit icon"></i>
+    <% end %>
+  </td>
+</tr>

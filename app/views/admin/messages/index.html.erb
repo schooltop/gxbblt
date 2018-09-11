@@ -1,0 +1,22 @@
+<div class="left floated wide column">
+      <%= link_to new_admin_message_path, class: 'ui primary button' do %>
+        <i class="puls icon"></i> 增加
+      <% end %>
+</div>
+
+<table class="ui selectable striped celled table">
+    <thead>
+    <tr >
+      <th class="center aligned">标题</th>
+      <th class="center aligned">公司</th>
+      <th class="center aligned">信息类型</th>
+      <th class="center aligned">信息内容</th>
+      <th class="center aligned">联系人</th>
+      <th class="center aligned">点击次数</th>
+      <th class="center aligned">操作</th>
+    </tr>
+    </thead>
+    <tbody>
+     <%= render partial: 'list', collection: @message, as: :message %>
+    </tbody>
+  </table>

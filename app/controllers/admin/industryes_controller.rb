@@ -1,9 +1,11 @@
 class Admin::IndustryesController < Admin::BaseController
+	before_action :set_industrye, only: [:show, :edit, :update, :destroy]
+
 	def index
-		if params[:category_id]
-			@industryes = Industrye.where(category_id:1)
+		if params[:id]
+			@industrye = Industrye.where(:id)
 		elsif
-			@industryes = Industrye.all
+			@industrye = Industrye.all
 		end
 	end
 
@@ -18,11 +20,24 @@ class Admin::IndustryesController < Admin::BaseController
 	end
 
 	def show
-
 	end
 
+	def update
+		@industrye.update(industrye_params)
+	end
+
+
+	def destroy
+      @industrye.destroy
+  
+    end
+
+    def set_industrye
+		@industrye = Industrye.find(params[:id])
+    end
+
 	def industrye_params
-		params.require(:industrye).permit(:category_id,:industry,:parent_id)
+		params.require(:industrye).permit(:id,:industry,:parent_id)
 
 	end
 
